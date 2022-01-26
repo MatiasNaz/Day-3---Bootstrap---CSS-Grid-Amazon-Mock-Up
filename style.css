@@ -1,32 +1,114 @@
-.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "left-side top-center right-side"
-    "left-side center right-side"
-    "footer footer footer";
-    justify-self: center;
+* {
+    box-sizing: border-box;
+
 }
 
-.footer { grid-area: footer; }
-
-.left-side { grid-area: left-side; }
-
-.right-side { grid-area: right-side; }
-
-.center { 
-    grid-area: center;
-    color: black;
-    justify-content: center;
-    border: 2px solid lightgray;
+.container{
+    background: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     
 }
 
-#id, .username {
-    display: inline-block;
+.login-img {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+    object-fit: cover;
+    align-items: center;
+    mix-blend-mode: multiply;
+    
 }
 
-.top-center { grid-area: top-center; }
+.login-img > img {
+    width: 200px;
+    border: none;
+}
+
+.login-container {
+    height: fit-content;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    padding: 30px;
+}
+
+.user-label {
+    margin-left: 15px;
+}
+
+.pass-label {
+    margin-left: 15px;
+}
+
+.login-container > form > input {
+    height: 35px;
+    margin: 15px;
+    width: 90%;
+    border-radius: 5px;
+}
+
+.forgot-pass {
+    display: inline-flex;
+    margin-left: 90px;
+}
+
+.login-container > p {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 12px;
+    justify-content: justify;
+}
+
+.sign-in-btn {
+    background: linear-gradient(rgba(170, 167, 167, 0.329), rgb(218, 161, 6));
+    display: flex;
+    font-size: 20px;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    height: 40px;
+    width: 90%;
+    margin: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(112, 108, 108, 0.705);
+}
+
+.new-amazon{
+    text-align: center;
+    font-size: 12px;
+    justify-content: justify;
+    
+}
+
+.login-registerBtn:hover {
+    background-color: blue;
+}
+
+.login-registerBtn{
+    background: linear-gradient(rgb(202, 200, 200), rgb(201, 198, 198));
+    height: 40px;
+    width: 90%;
+    font-size: 18px;
+    margin: 15px;
+    border-radius: 5px;
+    border: 1px solid;
+    box-shadow: 0 0 10px rgba(112, 108, 108, 0.705);
+    
+}
+
+button {
+    transition: all .5s ease;
+}
+
+button:hover {
+    color: rgba(255, 255, 255, 0.507);
+    background-color: rgba(206, 206, 206, 0.582);
+}
